@@ -6,15 +6,9 @@ function scrollToSection() {
     targetSection.scrollIntoView({ behavior: "smooth" });
 }
 
-// function updateSelectedSeat(button) {
-//     // Get the text of the clicked button
-//     var selectedSeat = button.innerText;
-//     // Update the content of the selected seat div
-//     var selectedSeatElement = document.getElementById("selectedSeat");
-//     selectedSeatElement.innerText = selectedSeat;
-// }
 
-// JavaScript
+
+
 let clickCount = 0;
 const maxSelectedSeats = 2; // Assuming there are 2 selected seat slots
 let totalPrice = 0;
@@ -34,38 +28,14 @@ function updateSelectedSeat(button) {
         totalPrice += seatPrice; // Increment the total price by the seat price
         document.getElementById('totalPrice').textContent = `BDT ${totalPrice}`; // Update the total price display
     }
+    
     button.classList.add('bg-green-500'); // Change button background color to green
-    button.disabled = true; // Disable the button to prevent multiple clicks
+    button.disabled = true;
+     // Disable the button to prevent multiple clicks
 }
 
-// const passengerNameInput = document.getElementById('passengerName');
-// const emailInput = document.getElementById('email');
-// const phoneNumberInput = document.getElementById('phoneNumber');
-// const nextButton = document.getElementById('nextButton');
-// const popupSection = document.getElementById('popupSection');
 
-// function checkInputs() {
-//     const passengerName = passengerNameInput.value.trim();
-//     const email = emailInput.value.trim();
-//     const phoneNumber = phoneNumberInput.value.trim();
 
-//     if (passengerName !== '' && email !== '' && phoneNumber !== '') {
-//         nextButton.removeAttribute('disabled');
-//     } else {
-//         nextButton.setAttribute('disabled', 'disabled');
-//     }
-// }
-
-// function showPopupSection(event) {
-//     event.preventDefault(); // Prevent the default form submission behavior
-//     popupSection.classList.remove('hidden');
-// }
-
-// passengerNameInput.addEventListener('input', checkInputs);
-// emailInput.addEventListener('input', checkInputs);
-// phoneNumberInput.addEventListener('input', checkInputs);
-
-// nextButton.addEventListener('click', showPopupSection);
 
 const passengerNameInput = document.getElementById('passengerName');
 const emailInput = document.getElementById('email');
@@ -112,3 +82,5 @@ nextButton.addEventListener('click', showPopupSection);
 // Add click event listener to the "Next" button in the popup section
 const popupNextButton = document.querySelector('#popupSection button');
 popupNextButton.addEventListener('click', showAllSections);
+
+
