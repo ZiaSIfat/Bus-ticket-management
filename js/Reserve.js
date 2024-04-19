@@ -26,7 +26,7 @@ function updateSelectedSeat(button) {
         selectedSeat.textContent = seat; // Update the selected seat
         selectedClass.textContent = 'Economy'; // Assuming it's always 'Economy'
         totalPrice += seatPrice; // Increment the total price by the seat price
-        document.getElementById('totalPrice').textContent = `BDT ${totalPrice}`; // Update the total price display
+        document.getElementById('totalPrice').textContent = ` ${totalPrice}`; // Update the total price display
     }
     
     button.classList.add('bg-green-500'); // Change button background color to green
@@ -47,12 +47,14 @@ function applyCoupon() {
     
     // Get the total price
     var totalPrice = parseFloat(document.getElementById('totalPrice').innerText);
+    console.log(totalPrice);
     
     // Check if the entered coupon code is valid
     if (coupons.hasOwnProperty(couponInput)) {
         // Calculate discounted price
         var discount = coupons[couponInput];
         var discountedPrice = totalPrice - (totalPrice * discount);
+        console.log({discount,discountedPrice,totalPrice},"line56");
         
         // Update the total price with discount
         document.getElementById('totalPrice').innerText = discountedPrice.toFixed(2);
@@ -100,9 +102,11 @@ function showPopupSection(event) {
 function showAllSections() {
     // Show all sections
     document.querySelectorAll('section').forEach(section => {
-        section.style.display = 'flex';
+        section.style.display = 'block';
     });
     popupSection.style.display = 'none'; // Hide the popup section
+    // remove classlist
+    button.className.rem('bg-green-500');
 }
 
 passengerNameInput.addEventListener('input', checkInputs);
