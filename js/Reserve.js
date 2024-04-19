@@ -34,6 +34,38 @@ function updateSelectedSeat(button) {
      // Disable the button to prevent multiple clicks
 }
 
+// Function to apply coupon and calculate discounted price
+function applyCoupon() {
+    // Get the input value
+    var couponInput = document.getElementById('couponInput').value;
+    
+    // Define coupon codes and their corresponding discounts
+    var coupons = {
+        'NEW15': 0.15, // 15% discount for NEW15
+        'COUPLE20': 0.20 // 20% discount for COUPLE20
+    };
+    
+    // Get the total price
+    var totalPrice = parseFloat(document.getElementById('totalPrice').innerText);
+    
+    // Check if the entered coupon code is valid
+    if (coupons.hasOwnProperty(couponInput)) {
+        // Calculate discounted price
+        var discount = coupons[couponInput];
+        var discountedPrice = totalPrice - (totalPrice * discount);
+        
+        // Update the total price with discount
+        document.getElementById('totalPrice').innerText = discountedPrice.toFixed(2);
+        
+        // Display success message
+        alert("Coupon applied successfully! Your discounted price is $" + discountedPrice.toFixed(2));
+    } else {
+        // Display error message for invalid coupon code
+        alert("Invalid coupon code! Please enter a valid coupon.");
+    }
+}
+
+
 
 
 

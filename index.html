@@ -15,7 +15,7 @@
     <header>
         <div id ="nav-bar"class="navbar bg-base-100 flex flex-col lg:flex-row lg:items-center">
             <div class="navbar-start flex items-center lg:mr-auto">
-              <p class="text-4xl lg:text-7xl font-extrabold mr-4">P Ticket</p> <!-- Updated title -->
+              <p class="text-4xl lg:text-7xl font-extrabold mr-4">Bus Ticket</p> <!-- Updated title -->
               <ul class="menu menu-horizontal px-1 flex flex-wrap lg:flex-nowrap"> <!-- Updated menu -->
                 <li><a href="#" class="block lg:inline-block lg:mt-0 mr-4">Home</a></li>
                 <li><a href="#" class="block lg:inline-block lg:mt-0 mr-4">About</a></li>
@@ -25,7 +25,7 @@
             </div>
             <div class="navbar-center hidden lg:flex"></div> <!-- No changes here -->
             <div class="navbar-end flex items-center">
-              <a onclick="Click()"class ="btn bg-green-200 rounded-full flex items-center justify-center lg:ml-auto"> <!-- Updated button -->
+              <a onclick="applyCoupon()"class ="btn bg-green-200 rounded-full flex items-center justify-center lg:ml-auto"> <!-- Updated button -->
                 <img src="images/bus-icon.png" alt="Bus Icon" class="w-6 h-6 mr-1">
                 Bus
               </a>
@@ -86,42 +86,7 @@
         <section class="px-4 py-8 flex-1">
           <h2 class="text-5xl font-bold mb-4 text-center">P.H Paribahan</h2>
           <p class="text-lg text-center mb-8">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
-          <div class="flex ">
-              <!-- Container -->
-              <div class="container bg-gray-100 shadow-md rounded-lg p-3 relative w-100 flex-start"> <!-- Added justify-start class -->
-                <div class="flex items-center mb-8">
-                    <h3 class="text-5xl font-extrabold mr-8">Greenline Paribahan <br> <span class="text-xs">Coach-009-WEB ! AC_Business</span> </h3>
-                    <img src="/images/bus-logo.png" alt="Bus Logo" class="w-24 h-24">
-                </div>
-
-                <p class="text-lg mb-4">Route:------------------------------------------------------------------------------------------ Dhaka to Sylhet</p>
-                <p class="text-lg mb-8">Departure Time:--------------------------------------------------------------------------------- 9:00 PM</p>
-                <button class="btn bg-green-200 flex items-center justify-center absolute top-0 right-0 mt-4 mr-8">
-                    <img src="/images/seat-green.png" alt="Bus Icon" class="w-8 h-8 mr-2"> 40 Seats left
-                </button>
-                <div class="flex justify-between">
-                    <div class=" bg-gray-200 border w-32 h-20 flex items-center justify-center">
-                      Boarding Point - Laxmipur
-                    </div>
-                    <div class=" bg-gray-200 w-32 h-20flex items-center justify-center">
-                      Dropping Point - Bogura
-                    </div>
-                    <div class="bg-gray-200 w-32 h-20 flex items-center justify-center"> <!-- Removed rounded class -->
-                      Est. Time - 11 Hour
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col justify-between">
-              
-              <img src="/images/fare.png" alt="Fare Image" class="w-64 h-auto">
-
-              
-              <p class="text-5xl bg-white p-4 ">550 tk <br>per seat</p>
-
-
-
-
-          </div>
+         
             
       </section>
 
@@ -366,7 +331,7 @@
                 <div class="flex   m-1">
                   <div class="flex">
                       <input type="text" id="couponInput" class="py-2 px-4 border border-gray-300 rounded-l focus:outline-none focus:border-blue-500" placeholder="Enter coupon code">
-                      <button id="applyButton"class="py-2 px-4 bg-green-500 text-white rounded-r hover:bg-green-600 focus:outline-none focus:bg-green-600">Apply</button>
+                      <button onclick="applyCoupon()" id="applyButton"class="py-2 px-4 bg-green-500 text-white rounded-r hover:bg-green-600 focus:outline-none focus:bg-green-600">Apply</button>
                   </div>
               </div>
   
